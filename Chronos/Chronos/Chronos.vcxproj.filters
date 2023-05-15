@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="End.cpp">
+      <Filter>source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Instructions.cpp">
+      <Filter>source files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Portal.cpp">
+      <Filter>source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Present.cpp">
+      <Filter>source files</Filter>
+    </ClCompile>
+    <ClCompile Include="PuzzleOne.cpp">
+      <Filter>source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Splash.cpp">
+      <Filter>source files</Filter>
+    </ClCompile>
+    <ClCompile Include="FinalPuzzle.cpp">
+      <Filter>source files</Filter>
+    </ClCompile>
+    <ClCompile Include="PuzzleTwo.cpp">
+      <Filter>source files</Filter>
+    </ClCompile>
+    <ClCompile Include="PuzzleThree.cpp">
+      <Filter>source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Globals.cpp">
+      <Filter>source files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="End.h">
+      <Filter>header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals.h">
+      <Filter>header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Instructions.h">
+      <Filter>header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Portal.h">
+      <Filter>header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Present.h">
+      <Filter>header files</Filter>
+    </ClInclude>
+    <ClInclude Include="PuzzleOne.h">
+      <Filter>header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Splash.h">
+      <Filter>header files</Filter>
+    </ClInclude>
+    <ClInclude Include="FinalPuzzle.h">
+      <Filter>header files</Filter>
+    </ClInclude>
+    <ClInclude Include="PuzzleTwo.h">
+      <Filter>header files</Filter>
+    </ClInclude>
+    <ClInclude Include="PuzzleThree.h">
+      <Filter>header files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="header files">
+      <UniqueIdentifier>{a67ea5a4-ab9e-4d4b-aac6-5a286f6f67c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source files">
+      <UniqueIdentifier>{d15da686-a1f3-415f-a95f-51b629c606e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{8a602acf-1540-4479-b76f-2a5e70e45ddf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="ASSETS\FONTS\ariblk.ttf">
+      <Filter>assets</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="ASSETS\IMAGES\SFML-LOGO.png">
+      <Filter>assets</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

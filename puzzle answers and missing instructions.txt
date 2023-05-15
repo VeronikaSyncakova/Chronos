@@ -1,0 +1,9 @@
+Puzzle one - 15
+Puzzle two - 90
+Puzzle three - 16
+Final puzzle - 12 90 16 (first puzzle answer was 12 but got changed on last moment), then type in the shown code (bekhso), it should display enigma and kill kitler (npc).
+
+Movement: WASD or left right up down
+Npc interaction: move towards it, as soon as "help" message appears you can click on him and solve the puzzle, use the portal to return to previous screen.
+
+Not completly finished: I am not sure if the door unlocking from first puzzle works correctly so i left the second puzzle portal open, therefore I kindly ask you to go left at the beginning as it is the first puzzle.
