@@ -50,6 +50,24 @@ void End::processEvents(sf::Event t_event)
 		{ //plays the game
 			Game::s_currentMode = GameMode::Menu;
 			Game::s_restart = true;
+			m_restart.setColor(sf::Color::White);
+			m_restart.setScale({ 2.0f,2.0f });
+		}
+	}
+
+	if (sf::Event::MouseMoved == t_event.type)
+	{
+		mouse.x = t_event.mouseMove.x;
+		mouse.y = t_event.mouseMove.y;
+		if (m_restart.getGlobalBounds().contains(mouse))
+		{
+			m_restart.setColor({ 155u,155u,155u,255u });
+			m_restart.setScale({ 2.5f, 2.5f });
+		}
+		else
+		{
+			m_restart.setColor(sf::Color::White);
+			m_restart.setScale({ 2.0f,2.0f });
 		}
 	}
 }

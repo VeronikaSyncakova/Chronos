@@ -47,6 +47,23 @@ void Instructions::processEvents(sf::Event t_event)
 		if (m_button.getGlobalBounds().contains(mouse))
 		{ //plays the game
 			Game::s_currentMode = GameMode::Menu;
+			m_menuButton.setColor(sf::Color::White);
+			m_menuButton.setScale({ 1.0f,1.0f });
+		}
+	}
+	if (sf::Event::MouseMoved == t_event.type)
+	{
+		mouse.x = t_event.mouseMove.x;
+		mouse.y = t_event.mouseMove.y;
+		if (m_menuButton.getGlobalBounds().contains(mouse))
+		{
+			m_menuButton.setColor({ 155u,155u,155u,255u });
+			m_menuButton.setScale({ 1.5f, 1.5f });
+		}
+		else
+		{
+			m_menuButton.setColor(sf::Color::White);
+			m_menuButton.setScale({ 1.0f,1.0f });
 		}
 	}
 }

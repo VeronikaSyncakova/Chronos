@@ -297,7 +297,7 @@ void FinalPuzzle::npcInteraction()
 bool FinalPuzzle::checkCorrectCode()
 {//checks for right numerical code
 	if (m_intigers[0] == 1 &&
-		m_intigers[1] == 2 &&
+		m_intigers[1] == 5 &&
 		m_intigers[2] == 9 &&
 		m_intigers[3] == 0 &&
 		m_intigers[4] == 1 &&
@@ -375,5 +375,8 @@ void FinalPuzzle::checkCorrectString(std::string t_string)
 	{
 		m_correctMessage = true;
 		m_hitlerAlive = false;
+		m_npcMessage.setString("Correct answear!");
+		m_writing = false;
 	}
+	
 }

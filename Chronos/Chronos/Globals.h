@@ -16,10 +16,10 @@ enum class GameMode
 };
 
  //the side of screen
-const int TOP = 0;
-const int BOTTOM = 1;
-const int RIGHT = 2;
-const int LEFT = 3;
+const int TOP = 2;
+const int BOTTOM = 3;
+const int RIGHT = 0;
+const int LEFT = 1;
 
 
 const int SCREEN_WIDTH = 800;

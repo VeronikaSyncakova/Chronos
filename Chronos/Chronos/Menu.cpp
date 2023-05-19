@@ -71,14 +71,48 @@ void Menu::processEvents(sf::Event t_event)
 		if (m_playSprite.getGlobalBounds().contains(mouse))
 		{ //plays the game
 			Game::s_currentMode = GameMode::Present;
+			m_playSprite.setColor(sf::Color::White);
+			m_playSprite.setScale({ 1.0f, 1.0f });
 		}
 		else if (m_insSprite.getGlobalBounds().contains(mouse))
 		{ //displays instructions
 			Game::s_currentMode = GameMode::Instructions;
+			m_insSprite.setColor(sf::Color::White);
+			m_insSprite.setScale({ 1.0f,1.0f });
 		}
 		else if (m_quitSprite.getGlobalBounds().contains(mouse))
 		{
 			Game::s_exitGame = true;
+		}
+	}
+	
+	if (sf::Event::MouseMoved == t_event.type)
+	{
+		mouse.x = t_event.mouseMove.x;
+		mouse.y = t_event.mouseMove.y;
+		if (m_playSprite.getGlobalBounds().contains(mouse))
+		{
+			m_playSprite.setColor({ 155u,155u,155u,255u });
+			m_playSprite.setScale({ 1.5f, 1.5f });
+		}
+		else if (m_insSprite.getGlobalBounds().contains(mouse))
+		{
+			m_insSprite.setColor({ 155u,155u,155u,255u });
+			m_insSprite.setScale({ 1.5f,1.5f });
+		}
+		else if (m_quitSprite.getGlobalBounds().contains(mouse))
+		{
+			m_quitSprite.setColor({ 155u,155u,155u,255u });
+			m_quitSprite.setScale({ 1.5f,1.5f });
+		}
+		else
+		{
+			m_playSprite.setColor(sf::Color::White);
+			m_insSprite.setColor(sf::Color::White);
+			m_quitSprite.setColor(sf::Color::White);
+			m_playSprite.setScale({ 1.0f, 1.0f });
+			m_insSprite.setScale({ 1.0f,1.0f });
+			m_quitSprite.setScale({ 1.0f,1.0f });
 		}
 	}
 }

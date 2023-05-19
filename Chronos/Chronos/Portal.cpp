@@ -55,7 +55,7 @@ void Portal::initialise(int t_i)
 		m_door.setOrigin(10.0f, 75.0f);
 		m_position = sf::Vector2f{ 950.0f,SCREEN_HEIGHT / 2.0f };
 		m_doorPosition = { 900.0f, SCREEN_HEIGHT / 2.0f };
-		m_doorLocked = false; //should be true
+		m_doorLocked = true; //should be true
 
 	}
 
