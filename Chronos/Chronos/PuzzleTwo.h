@@ -40,4 +40,6 @@ private:
 	sf::Texture m_plusTexture;
 	sf::Sprite m_plusSprite[2];
 	sf::Sprite m_minusSprite[2];
+
+	sf::CircleShape m_circle; //circle that shows if the answer is correct or not
 };

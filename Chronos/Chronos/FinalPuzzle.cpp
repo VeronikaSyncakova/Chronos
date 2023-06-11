@@ -3,6 +3,18 @@
 
 void FinalPuzzle::initialise(sf::Font t_font)
 {
+	m_npcCanClick = false; 
+	m_drawPuzzle = false; 
+	m_writing = false; 
+	m_correctMessage = false;
+	m_decryptedString = "";
+	m_hitlerAlive = true;
+
+	m_circle.setFillColor(sf::Color::Red);
+	m_circle.setRadius(10.0f);
+	m_circle.setOrigin(5.0f, 5.0f);
+	m_circle.setPosition(740.0f, 100.0f);
+
 	m_font = t_font;
 	m_npcMessage.setFont(m_font);
 	m_npcMessage.setCharacterSize(24U);
@@ -147,6 +159,7 @@ void FinalPuzzle::render(sf::RenderWindow& t_window)
 			t_window.draw(m_answear);
 			t_window.draw(m_encryptedMessage);
 			t_window.draw(m_decryptedMessage);
+			t_window.draw(m_circle);
 		}
 	}
 }
@@ -243,6 +256,7 @@ void FinalPuzzle::processEvents(sf::Event t_event)
 					}
 					m_numbers[i].setString(std::to_string(m_intigers[i]));
 				}
+				checkCorrectCode();
 			}
 			
 			if (!m_writing)
@@ -252,6 +266,7 @@ void FinalPuzzle::processEvents(sf::Event t_event)
 					m_writing = true;
 					m_npcMessage.setString("write the message. to stop writing click the box again");
 					m_npcMessage.setCharacterSize(20u);
+					m_answear.setOutlineColor(sf::Color::Red);
 				}
 			}
 			else
@@ -261,6 +276,7 @@ void FinalPuzzle::processEvents(sf::Event t_event)
 					m_writing = false;
 					m_npcMessage.setString("Help!");
 					m_npcMessage.setCharacterSize(24u);
+					m_answear.setOutlineColor(sf::Color::White);
 				}
 			}
 		}
@@ -303,6 +319,7 @@ bool FinalPuzzle::checkCorrectCode()
 		m_intigers[4] == 1 &&
 		m_intigers[5] == 6)
 	{
+		m_circle.setFillColor(sf::Color::Green);
 		return true;
 	}
 	else
@@ -377,6 +394,7 @@ void FinalPuzzle::checkCorrectString(std::string t_string)
 		m_hitlerAlive = false;
 		m_npcMessage.setString("Correct answear!");
 		m_writing = false;
+		m_answear.setOutlineColor(sf::Color::Green);
 	}
 	
 }

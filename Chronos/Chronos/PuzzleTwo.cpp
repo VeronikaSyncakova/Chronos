@@ -3,6 +3,14 @@
 
 void PuzzleTwo::initialise(sf::Font t_font)
 {
+	m_npcCanClick = false; 
+	m_drawPuzzle = false;
+
+	m_circle.setFillColor(sf::Color::Red);
+	m_circle.setRadius(10.0f);
+	m_circle.setOrigin(5.0f, 5.0f);
+	m_circle.setPosition(580.0f, 200.0f);
+
 	m_font = t_font;
 	m_npcMessage.setFont(m_font);
 	m_npcMessage.setCharacterSize(24U);
@@ -116,6 +124,7 @@ void PuzzleTwo::render(sf::RenderWindow& t_window)
 			t_window.draw(m_minusSprite[i]);
 			t_window.draw(m_numbers[i]);
 		}
+		t_window.draw(m_circle);
 	}
 }
 
@@ -215,6 +224,7 @@ void PuzzleTwo::checkCorrectCode()
 {
 	if (m_intigers[0] == 9 && m_intigers[1] == 0)
 	{ //unlocking the doors
+		m_circle.setFillColor(sf::Color::Green);
 		e_doorLocked = 1;
 		m_npcMessage.setString("Correct answer, you can go to next puzzle!");
 	}

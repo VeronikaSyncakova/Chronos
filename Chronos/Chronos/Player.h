@@ -24,7 +24,7 @@ public:
 private:
 	sf::RectangleShape m_body;
 	sf::Vector2f m_position; //position of player
-	float m_speed = 2.0f; //speed of the player movement
+	float m_speed = 4.0f; //speed of the player movement
 
 	sf::Texture m_playerTexture; //player spritesheet
 	sf::Sprite m_playerSprite; //player sprite

@@ -3,6 +3,14 @@
 
 void PuzzleThree::initialise(sf::Font t_font)
 {
+	m_npcCanClick = false;
+	m_drawPuzzle = false;
+
+	m_circle.setFillColor(sf::Color::Red);
+	m_circle.setRadius(10.0f);
+	m_circle.setOrigin(5.0f, 5.0f);
+	m_circle.setPosition(460.0f, 300.0f);
+
 	m_font = t_font;
 	m_npcMessage.setFont(m_font);
 	m_npcMessage.setCharacterSize(24U);
@@ -116,6 +124,7 @@ void PuzzleThree::render(sf::RenderWindow& t_window)
 			t_window.draw(m_minusSprite[i]);
 			t_window.draw(m_numbers[i]);
 		}
+		t_window.draw(m_circle);
 	}
 }
 
@@ -215,6 +224,7 @@ void PuzzleThree::checkCorrectCode()
 {
 	if (m_intigers[0] == 1 && m_intigers[1] == 6)
 	{ //unlocking the doors
+		m_circle.setFillColor(sf::Color::Green);
 		e_doorLocked = 1;
 		m_npcMessage.setString("Correct answer, you can go to next puzzle!");
 	}

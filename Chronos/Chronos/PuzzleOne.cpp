@@ -21,6 +21,16 @@ void PuzzleOne::initialise(sf::Font t_font)
 	m_answerBox.setOrigin(200.0f, 35.0f);
 	m_answerBox.setPosition(850.0f, 100.0f);
 
+	m_npcCanClick = false; 
+	m_drawPuzzle = false;
+	m_correctNumberOne = false;
+	m_correctNumberTwo = false;
+
+	m_circle.setFillColor(sf::Color::Red);
+	m_circle.setRadius(10.0f);
+	m_circle.setOrigin(5.0f,5.0f);
+	m_circle.setPosition(750.0f, 35.0f);
+
 	if (!puzzleTexture.loadFromFile("ASSETS/IMAGES/puzzleBox.png"))
 	{
 		std::cout << "error with puzzle box file";
@@ -165,7 +175,7 @@ void PuzzleOne::render(sf::RenderWindow& t_window)
 		t_window.draw(numSprite8);
 		t_window.draw(numSprite9);
 		t_window.draw(numSprite0);
-		
+		t_window.draw(m_circle);
 	}
 
 	
@@ -414,6 +424,7 @@ void PuzzleOne::checkAnswer()
 	}
 	if (m_correctNumberOne == true && m_correctNumberTwo == true)
 	{
+		m_circle.setFillColor(sf::Color::Green);
 		e_doorLocked = 1;
 
 		m_npcMessage.setString("You did it! Move on to the next portal!");

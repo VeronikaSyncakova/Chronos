@@ -216,7 +216,7 @@ void Present::processEvents(sf::Event t_event)
 
 void Present::moveUp()
 {
-	m_movement = { 0,2 };
+	m_movement = { 0,4 };
 	if (m_leftTop.getPosition().y < 200)
 	{
 		m_leftTop.setPosition(m_leftTop.getPosition() + m_movement);
@@ -239,7 +239,7 @@ void Present::moveUp()
 
 void Present::moveDown()
 {
-	m_movement = { 0,-2 };
+	m_movement = { 0,-4 };
 	if (m_leftBottom.getPosition().y > 400)
 	{
 		m_leftTop.setPosition(m_leftTop.getPosition() + m_movement);
@@ -261,7 +261,7 @@ void Present::moveDown()
 
 void Present::moveRight()
 {
-	m_movement = { -2,0 };
+	m_movement = { -4,0 };
 	if (m_rightBottom.getPosition().x > 600)
 	{
 		m_leftTop.setPosition(m_leftTop.getPosition() + m_movement);
@@ -395,7 +395,7 @@ void Present::backgroundCollision()
 
 void Present::moveLeft()
 {
-	m_movement = { 2,0 };
+	m_movement = { 4,0 };
 	if (m_leftBottom.getPosition().x < 200)
 	{
 		m_leftTop.setPosition(m_leftTop.getPosition() + m_movement);

@@ -40,4 +40,6 @@ private:
 	sf::Sprite m_npcSprite;
 	sf::Texture m_backgroundTexture; //setup background sprite
 	sf::Sprite m_backgroundSprite;
+
+	sf::CircleShape m_circle; //indicates is answer is correct or not
 };

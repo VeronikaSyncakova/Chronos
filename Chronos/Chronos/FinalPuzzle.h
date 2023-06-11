@@ -56,4 +56,5 @@ private:
 	sf::Sprite m_minusSprite[6];
 
 	bool m_hitlerAlive = true; //if hitler is alive
+	sf::CircleShape m_circle;
 };

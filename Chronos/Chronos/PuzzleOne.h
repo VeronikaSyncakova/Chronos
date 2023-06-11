@@ -27,6 +27,8 @@ class PuzzleOne
 	sf::Texture m_backgroundTexture; //setup background sprite
 	sf::Sprite m_backgroundSprite;
 
+	sf::CircleShape m_circle; //circle that indicates if the answer is correct or not
+
 
 public:
 	void initialise(sf::Font t_font);
