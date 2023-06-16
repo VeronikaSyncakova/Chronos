@@ -16,5 +16,5 @@ private:
 	sf::RectangleShape m_button;
 	sf::Texture m_menuTexture; //texture for menu button
 	sf::Sprite m_menuButton; //menu button sprite
-
+	sf::Text m_instructionsText; //text displaying instructions
 };

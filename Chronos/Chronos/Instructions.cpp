@@ -16,6 +16,12 @@ void Instructions::initialise(sf::Font t_font)
 	m_button.setFillColor(sf::Color::Red);
 	m_button.setPosition(720.0f, 60.0f);
 
+	m_instructionsText.setFont(m_font);
+	m_instructionsText.setCharacterSize(32U);
+	m_instructionsText.setFillColor(sf::Color::White);
+	m_instructionsText.setString("Your mission is to kill Kittler.\nYou have to unlock all portals by solving the puzzles.\nOnce you found him, you have to solve the final\npuzzle to kill him.\nA,S,W,D or arrows for movement\ninteract with npc's when they need your help!");
+	m_instructionsText.setPosition(20.0f, 140.0f);
+
 	if (!m_menuTexture.loadFromFile("ASSETS\\IMAGES\\menu.png"))
 	{
 		std::cout << "problem with loading menu image" << std::endl;
@@ -34,6 +40,7 @@ void Instructions::render(sf::RenderWindow& t_window)
 {
 	t_window.draw(m_text);
 	t_window.draw(m_menuButton);
+	t_window.draw(m_instructionsText);
 }
 
 void Instructions::processEvents(sf::Event t_event)
